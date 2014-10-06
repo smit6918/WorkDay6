@@ -27,7 +27,50 @@ Public Class Form1
 
         ' Please write your code here...
 
-        txtResult.Text = "Not implemented yet"
+        'Function CBool(A)
+
+        ' If B > C Then
+
+        ' End If
+        'now looking for absence of intersection, which is easier to find 
+        Dim result As String
+        If (B < C) Or (D < A) Then
+            result = "No Intersection"
+        Else
+
+
+            Dim begPoint As Double
+            begPoint = Math.Max(A, C)
+
+            Dim endPoint As Double
+            endPoint = Math.Min(B, D)
+
+
+
+            result = "The intersection is from" & begPoint & "to" & endPoint
+
+
+            txtResult.Text = result
+        End If
     End Sub
 
+    Function FindIntersection(A As Double, B As Double, C As Double, D As Double) As String
+        Dim result As String
+        If (B < C) Or (D < A) Then
+            result = "No Intersection"
+        Else
+
+            'brought along the code from befroe in to 
+            Dim begPoint As Double
+            begPoint = Math.Max(A, C)
+
+            Dim endPoint As Double
+            endPoint = Math.Min(B, D)
+
+
+    End Function
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
